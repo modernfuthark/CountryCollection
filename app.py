@@ -1,7 +1,9 @@
 #!/usr/bin.python3
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app, resources={"r/*": "0.0.0.0"}})
 
 
 @app.errorhandler(404)
