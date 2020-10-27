@@ -1,14 +1,18 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Country Collection</title>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="Scraper.js"></script>
-		<link rel="stylesheet" href="Tester.css">
-	</head>
-	<body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Country Collection</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="Main.js"></script>
+	<link rel="stylesheet" href="Main_Style.css">
+	<link rel="stylesheet" href="Searchbar.css">
+</head>
+
+<body>
+	<div class="sidebar">
 		<div class="dropdown">
-			<button class="dropbtn">Search via...</button>
+			<button class="dropbtn">Search via Country name</button>
 			<div class="dropdown-content">
 				<p>Alpha</p>
 				<p>Country name</p>
@@ -16,15 +20,38 @@
 		</div>
 		<div class="searchbar">
 			<input type="text" placeholder="Search...">
-			<ul class="results">
-			</ul>
+			<ul class="results"></ul>
 		</div>
-		<p id="searchmode">Test1</p>
-
-		<img id="flagbkgn">
+	</div>
+	<div class="initialInfo">
+		<p>Search for a country on the side!</p>
+	</div>
+	<div class="infoDiv">
+		<div class="flag_grad">
+			<img id="flagbkgn" src="">
+		</div>
 		<div class="info_box">
-			<h1 class="info_countryName"></h1>
-			<h2 class="info_countryCapital"></h1>
+			<div class="infoText">
+				<h1 id="info_countryName"></h1>
+				<h2 id="info_countryCapital"></h2>
+				<h2 id="info_countryPopulation"></h2>
+				<div id="info_Languages">
+					<p>Languages</p>
+					<ul></ul>
+				</div>
+				<div class="exchanger">
+					<p>Currency Converter</p>
+					<input type="number" placeholder="USD">
+					<p>🡆</p>
+					<p class="rateOutput">...</p>
+				</div>
+			</div>
+			<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCz5aeUcSAeVm_93qgq4paYsz_xoJb4YW0
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+			</iframe>
 		</div>
-	</body>
+
+	</div>
+</body>
+
 </html>
