@@ -46,10 +46,9 @@ function gatherSearchData () {
 }
 
 function updateData (data) {
-  // console.log('Data length: ' + data.length);
-  // console.log(data);
   $('.searchbar .results').empty();
-  data = data[0]; // Data is given as an array of json values, select first
+  if (searchmod === 'Country name') { data = data[0] }
+  // Data is given as an array of json values, select first
   // Data array can contain more than 1 JSON, only seen this if you select "Congo" in the search results
 
   // Update all information for the page
@@ -103,6 +102,7 @@ function requestData (v) {
   // console.log(v);
   if (v !== '') {
     const url = `${endpoint}/${searchurls[searchmod]}/${v}`;
+    console.log(url);
 
     $.ajax({
       type: 'GET',
