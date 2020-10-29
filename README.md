@@ -3,7 +3,6 @@
 ---
 Country Collection is a website designed to help people learn about different countries around the world.
 
-Current HTML and CSS files are for testing, as I've yet to work on the main site; I've been focused on getting the main backend system working before that.
-
+No new gifs have been created of the most recent version, all there is right now is a gif from the testing site.
 <img src="https://i.imgur.com/tyycXXo.gif" width="400">
 
