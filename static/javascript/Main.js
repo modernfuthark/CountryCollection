@@ -26,10 +26,6 @@ function gatherSearchData () {
         searchNames.push(country.name);
         searchAlphas.push(country.alpha3Code);
       })
-      //for (let i = 0; i <= data.length; i++) {
-        //searchNames.push(data[i]['name']);
-        //searchAlphas.push(data[i]['alpha3Code']);
-      //}
     }
   });
   // console.log(searchNames);
@@ -51,10 +47,12 @@ function updateData (data) {
   // Data is given as an array of json values, select first
   // Data array can contain more than 1 JSON, only seen this if you select "Congo" in the search results
 
-  // Update all information for the page
+  // Prepair elements
   $('.initialInfo').remove(); // Remove initial information div
   $('.infodiv').css('visibility', 'visible'); // Show country information div
-  symbol = data.currencies[0].code
+  symbol = data.currencies[0].code // Set currency symbol for the exchanger
+
+  // Info display
   $('#flagbkgn').attr('src', `${data.flag}`);
   $('.infodiv iframe').attr('src', `${mapsApiUrl}&q=${data.name}`);
   $('#info_countryName').text(`${data.name}`);
@@ -120,8 +118,7 @@ function requestData (v) {
 $('document').ready(function () {
   gatherSearchData();
 
-  $('.searchbar').on('keydown', 'input', SearchDisplay);
-  // $('.searchbar').on('keypress', 'input', requestData); // Goes through the searching / HTTP GET process
+  $('.searchbar').on('keydown', 'input', SearchDisplay); // Goes through the searching / HTTP GET process
 
   $('.dropdown-content p').click(function (_) { // Change searching mode
     searchmod = $(this).text();
