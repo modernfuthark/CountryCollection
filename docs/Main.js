@@ -95,12 +95,11 @@ function requestData (v) {
   // console.log(v);
   if (v !== '') {
     const url = `${endpoint}/${searchurls[searchmod]}/${v}`;
-    console.log(url);
 
     $.ajax({
       type: 'GET',
       url: url,
-      success: updateData, // Results B^)
+      success: updateData, // Got results, updateData function is called
       error: function () { // Got no results
         $('.info_countryName').text('Error 404!');
       }
@@ -111,19 +110,22 @@ function requestData (v) {
 }
 
 $('document').ready(function () {
-  gatherSearchData();
+  gatherSearchData(); // When document is ready, query APIs to cache responces
 
-  $('.searchbar').on('keydown', 'input', SearchDisplay); // Goes through the searching / HTTP GET process
+  // Live updates for the search results display
+  $('.searchbar').on('keydown', 'input', SearchDisplay);
 
-  $('.dropdown-content p').click(function (_) { // Change searching mode
+  // Updates searching mode via dropdown menu
+  $('.dropdown-content p').click(function (_) {
     searchmod = $(this).text();
     $('.dropdown button').text(`Search via ${searchmod}`)
   });
 
+  // Search result event listener
   $('.results').on('click', '#searchres', function () {
     requestData($(this).text());
   });
 
-  // Content event listeners
+  // Exchange rate event listener
   $('.exchanger').on('keydown', 'input', exchanger);
 });
