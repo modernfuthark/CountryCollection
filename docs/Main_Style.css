@@ -82,6 +82,7 @@ body {
 	padding: 0;
 }
 
+/* Timezone lsit */
 #info_countryTimeZones {
 	list-style: '';
 	font-family: Arial;
