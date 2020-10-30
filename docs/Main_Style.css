@@ -70,7 +70,6 @@ body {
 	text-align: center;
 	padding: 1;
 	margin-bottom: 5px;
-	
 }
 
 #info_Languages p {
@@ -80,6 +79,12 @@ body {
 #info_Languages ul{
 	font-family: Arial;
 	list-style: '';
+	padding: 0;
+}
+
+#info_countryTimeZones {
+	list-style: '';
+	font-family: Arial;
 	padding: 0;
 }
 
