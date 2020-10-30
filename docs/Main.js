@@ -28,7 +28,6 @@ function gatherSearchData () {
       })
     }
   });
-  // console.log(searchNames);
 
   $.ajax({
     url: 'https://api.exchangerate.host/latest?base=USD',
@@ -38,7 +37,6 @@ function gatherSearchData () {
       exchangeRates = data;
     }
   });
-  // console.log(exchangeRates);
 }
 
 function updateData (data) {
@@ -51,6 +49,8 @@ function updateData (data) {
   $('.initialInfo').remove(); // Remove initial information div
   $('.infodiv').css('visibility', 'visible'); // Show country information div
   symbol = data.currencies[0].code // Set currency symbol for the exchanger
+  exchanger(true);
+
 
   // Info display
   $('#flagbkgn').attr('src', `${data.flag}`);
@@ -84,8 +84,11 @@ function SearchDisplay () {
   }
 }
 
-function exchanger() {
-  const USD = $(this).val();
+function exchanger(override) {
+  const USD = 1;
+  if (!override) {
+    USD = $(this).val();
+  }
   $('.exchanger .rateOutput').text(`${(USD * exchangeRates.rates[symbol]).toFixed(2)} ${symbol}`);
 }
 
