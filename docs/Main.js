@@ -1,9 +1,10 @@
 #!/usr/bin/node
 
+// Base URLS
 const endpoint = 'https://restcountries.eu/rest/v2';
 const mapsApiUrl = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyCz5aeUcSAeVm_93qgq4paYsz_xoJb4YW0';
 
-// Searching variables
+// Searching variables and caches
 const searchNames = []; // Gets set later
 const searchAlphas = [];
 let searchmod = 'Country name'; // Default
@@ -93,9 +94,6 @@ function exchanger(override) {
 }
 
 function requestData (v) {
-  // console.log('clicked');
-  // const v = $(this).val();
-  // console.log(v);
   if (v !== '') {
     const url = `${endpoint}/${searchurls[searchmod]}/${v}`;
 
