@@ -59,6 +59,7 @@ function updateData (data) {
   $('#info_countryName').text(`${data.name}`);
   $('#info_countryCapital').text(`Capital: ${data.capital}`);
   $('#info_countryPopulation').text(`Population: ${(data.population).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`); // Fancy comma regex from Elias Zamaria
+  $('#info_countryTimeZone').text(`Timezones: ${data.timezones}`);
   $('#info_Languages ul').empty();
   data.languages.forEach(function (v) {
     const url = `https://omniglot.com/writing/${v.name.toLowerCase()}.htm`;
