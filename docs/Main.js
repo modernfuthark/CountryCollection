@@ -65,14 +65,13 @@ function updateData (data) {
   });
 }
 
-function SearchDisplay (input) {
+function SearchDisplay () {
   const results = [];
-  $('.searchbar .results').empty();
+  $('.searchbar .results').empty(); // Clear old results
   if (searchmod === 'Country name') {
     for (let i = 0; i < searchNames.length; i++) {
       const v = searchNames[i];
-      if (v.toUpperCase().includes($(this).val().toUpperCase())) {
-        // console.log(v);
+      if (v.toUpperCase().includes($(this).val().toUpperCase())) { // Compare input and v in uppercase to avoid case sensitivity
         results.push(v);
         $('.searchbar .results').append(`<li id="searchres">${v}</li`);
       }
@@ -80,8 +79,7 @@ function SearchDisplay (input) {
   } else if (searchmod === 'Alpha') {
     for (let i = 0; i < searchAlphas.length; i++) {
       const v = searchAlphas[i];
-      if (v.toUpperCase().includes($(this).val().toUpperCase())) {
-        // console.log(v);
+      if (v.toUpperCase().includes($(this).val().toUpperCase())) { // Compare input and v in uppercase to avoid case sensitivity
         results.push(v);
         $('.searchbar .results').append(`<li id="searchres">${v}</li`);
       }
