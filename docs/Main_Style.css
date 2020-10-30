@@ -76,7 +76,7 @@ body {
 	font-family: Arial;
 	font-size: 20;
 }
-#info_Languages ul{
+#info_Languages li{
 	font-family: Arial;
 	list-style: '';
 	padding: 0;
@@ -88,6 +88,12 @@ body {
 }
 
 #info_countryTimeZones ul {
+	list-style: '';
+	font-family: Arial;
+	padding: 0;
+}
+
+#timezone {
 	list-style: '';
 	font-family: Arial;
 	padding: 0;

@@ -61,7 +61,7 @@ function updateData (data) {
   $('#info_countryPopulation').text(`Population: ${(data.population).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`); // Fancy comma regex from Elias Zamaria
   $('#info_countryTimeZones').empty();
   data.timezones.forEach(function (v) {
-    $('#info_countryTimeZones').append(`<li>${v}</li>`);
+    $('#info_countryTimeZones').append(`<li id="timezone">${v}</li>`);
   })
   $('#info_Languages ul').empty();
   data.languages.forEach(function (v) {
