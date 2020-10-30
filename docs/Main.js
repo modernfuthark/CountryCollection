@@ -68,7 +68,7 @@ function updateData (data) {
 function SearchDisplay () {
   const results = [];
   $('.searchbar .results').empty(); // Clear old results
-  if (searchmod === 'Country name') {
+  if (searchmod === 'Country name') { // Determines the search array to parse through, either full names or Alpha3 codes
     for (let i = 0; i < searchNames.length; i++) {
       const v = searchNames[i];
       if (v.toUpperCase().includes($(this).val().toUpperCase())) { // Compare input and v in uppercase to avoid case sensitivity
