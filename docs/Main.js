@@ -84,7 +84,7 @@ function SearchDisplay () {
   }
 }
 
-function exchanger(input) {
+function exchanger() {
   const USD = $(this).val();
   $('.exchanger .rateOutput').text(`${(USD * exchangeRates.rates[symbol]).toFixed(2)} ${symbol}`);
 }
