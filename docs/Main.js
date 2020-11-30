@@ -132,5 +132,5 @@ $('document').ready(function () {
   });
 
   // Exchange rate event listener
-  $('.exchanger').on('keydown', 'input', exchanger);
+  $('.exchanger').on('keydown', 'input', exchanger(false));
 });
