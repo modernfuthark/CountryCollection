@@ -3,6 +3,7 @@
 ---
 Country Collection is a website designed to help people learn about different countries around the world.
 Written in JavaScript, and taking adventage of various APIs to provide information in one dynamic site.
+Users are allowed to search for countries by name or ISO Alpha3 codes.
 
 ### APIs used:
 * REST Countries (https://restcountries.eu/)
