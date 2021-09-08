@@ -1,8 +1,19 @@
 # Country Collection
-### Author: Tim Sninsky
+#### Author: Tim Sninsky
 ---
 Country Collection is a website designed to help people learn about different countries around the world.
+Written in JavaScript, and taking adventage of various APIs to provide information in one dynamic site.
 
-No new gifs have been created of the most recent version, all there is right now is a gif from the testing site.
-<img src="https://i.imgur.com/tyycXXo.gif" width="400">
+### APIs used:
+* REST Countries (https://restcountries.eu/)
+* Google Maps Developer API (https://developers.google.com/maps)
+* Exchange Rate API (https://exchangerate.host/#/)
+
+
+Official languages are linked to language profiles provided by https://omniglot.com/
+
+---
+![image](https://user-images.githubusercontent.com/53625935/132433785-613220d4-2ca2-4c24-9745-10802f793540.png)
+![image](https://user-images.githubusercontent.com/53625935/132433916-e6fbcc67-3e68-447d-9782-031b9d1d8ffc.png)
+
 
